@@ -4,10 +4,79 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Scribbler</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+
+    <div id="HeaderDiv">
+        <div>
+            <h1>Scribbler</h1>
+            <h6>Explore, Imagine, Create</h6>
+        </div>
+        <div>
+            <button id="SignUp" class="headerButton">Sign Up</button>
+            <button id="SignIn" class="headerButton">Sign in</button>
+
+            <div id="SignUpModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="closeSignUp">&times;</span>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <h2>Get Started</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label class="labelText">Name</label>
+                            <input type="text" placeholder="Enter your name" id="Name" required>
+                            <label class="labelText">Username</label>
+                            <input type="text" placeholder="Enter your username" id="lastName" required>
+                            <label class="labelText">Password</label>
+                            <input type="password" placeholder="Enter your password" id="password" required>
+                            <label class="labelText" id="ConfirmPassword">Confirm Password</label>
+                            <input type="password" placeholder="Re-enter your password" id="ReEnteredPassword" required>
+                            <button id="signUpSubmit" class="submit-btn">Sign Up</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="SignInModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="closeSignIn">&times;</span>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <h2>Welcome Back!</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label class="labelText">Username</label>
+                            <input type="text" placeholder="Enter your username" id="lastName" required>
+                            <label class="labelText">Password</label>
+                            <input type="password" placeholder="Enter your password" id="password" required>
+                            <button id="signInSubmit" class="submit-btn">Sign In</button>
+                        </form>
+                        <label class="labelHyperlink">Not a member </label> 
+                        <a href="" data-target="modal" data-dismiss="modal" id="hyperLinkSignUp">Sign Up</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="center">
+            <button id="AllPostsBtn" class="bodyButton">All Posts</button>
+            <button id="CreatePostBtn" class="bodyButton">Create Posts</button>
+        </div>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
