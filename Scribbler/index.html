@@ -11,72 +11,97 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <link href="styles/common.css" rel="stylesheet" type="text/css">
+	<link href="styles/header.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+</head>   
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
 
-    <div id="HeaderDiv">
-        <div>
-            <h1>Scribbler</h1>
-            <h6>Explore, Imagine, Create</h6>
-        </div>
-        <div>
-            <button id="SignUp" class="headerButton">Sign Up</button>
-            <button id="SignIn" class="headerButton">Sign in</button>
+     <div class="header">
+      <button id ="top_button_1" >Sign Up</button>
+      <button id ="top_button_2" >Sign In</button>
+      <a id="logo_text" class="logo">ScriBBler</a>
+      <p class="sub_text">Explore Imagine Create</p>
+  </div> 
 
-            <div id="SignUpModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="closeSignUp">&times;</span>
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                        <h2>Get Started</h2>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <label class="labelText">Name</label>
-                            <input type="text" placeholder="Enter your name" id="Name" required>
-                            <label class="labelText">Username</label>
-                            <input type="text" placeholder="Enter your username" id="lastName" required>
-                            <label class="labelText">Password</label>
-                            <input type="password" placeholder="Enter your password" id="password" required>
-                            <label class="labelText" id="ConfirmPassword">Confirm Password</label>
-                            <input type="password" placeholder="Re-enter your password" id="ReEnteredPassword" required>
-                            <button id="signUpSubmit" class="submit-btn">Sign Up</button>
-                        </form>
-                    </div>
-                    
-                </div>
-            </div>
-            <div id="SignInModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="closeSignIn">&times;</span>
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                        <h2>Welcome Back!</h2>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <label class="labelText">Username</label>
-                            <input type="text" placeholder="Enter your username" id="lastName" required>
-                            <label class="labelText">Password</label>
-                            <input type="password" placeholder="Enter your password" id="password" required>
-                            <button id="signInSubmit" class="submit-btn">Sign In</button>
-                        </form>
-                        <label class="labelHyperlink">Not a member </label> 
-                        <a href="" data-target="modal" data-dismiss="modal" id="hyperLinkSignUp">Sign Up</a>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
+
+<div id = "mid_button_area">
+      <p align = "center">
+          <a href = "html/postslist.html">
+            <button class= "middle_button" id="all_post_button">
+              All Posts 
+            </button>
+          </a>
+          <button class = "middle_button" id = "create_Post_button">
+            Create Post 
+          </button>
+      </p>
+  </div>
+
+` <div id="signup_modal" class="modal">                  
+  <div class="modal-content">
+    <span class="close">
+      &times;
+    </span>
+    <p>
+      <h2>Get Started</h2>
+      <hr class = "hr-Shade">
+      <form class = "form-style">
+      <label>Full Name</label><br>
+      <input type="text" placeholder="Enter Full Name" required> <br>           
+      <label>Username</label><br>
+      <input type="text" placeholder="Enter Username" required><br>                
+      <label>Password </label><br>
+      <input type="password" placeholder="Enter Password" required><br>                  
+      <label>Confirm Password</label><br>
+      <input type="password" placeholder="Confirm Password" required><br>                 
+      <button class = "Sign_Up_Button">Sign Up</button>
+      </form>       
+    </p>
+  </div>
+ </div>
+
+
+</div>
+
+<div id="signin_modal" class="modal">                  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+      <h2>Welcome Back !</h2>
+      <hr class = "hr-Shade">
+      <form class = "form-style">   
+        <label>Username</label> <br>
+        <input type="text" placeholder="Enter Username" required>
+        <label>Password</label> <br>
+        <input type="password" placeholder="Enter Password" required> <br>
+        <button class = "Sign-Up-Button">
+          Sign In
+        </button><br>
+        Not a member ? <a id = "linking" onclick='href_click()'><u style="color:blue">Sign Up</u></a>
+      </form>       
+    </p>
+  </div>
+</div>
+
+<div id="create_post_model" class="modal">                  
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>
+	<form class = "form-style"> 
+        <h2>Create Your Post</h2>
+        <hr class = "hr-shade">
+        <h4>Pen Your Post</h4>
+        <input type="text" placeholder="Enter title of your post">
+        <h4>Content</h4>
+        <textarea name="Content" id="textArea"  rows="10" placeholder="Enter content of your post"></textarea>  
+        <button class = sign-up-button>Create</button>    
+	</form> 
+      </p>
     </div>
-        <div class="center">
-            <button id="AllPostsBtn" class="bodyButton">All Posts</button>
-            <button id="CreatePostBtn" class="bodyButton">Create Posts</button>
-        </div>
-    <script src="scripts/index.js"></script>
+  </div>
+<script src = "scripts/index.js"></script>
 </body>
 
 </html>
